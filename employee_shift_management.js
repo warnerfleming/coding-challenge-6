@@ -20,3 +20,12 @@ function displayEmployeeShifts (employees) {
 }
 
 displayEmployeeShifts(employees)
+
+//Task 3
+function assignShift (employees) {
+    employees.find((name) => name === name)
+    if (employees.some((shifts) => shift.day === day))
+        console.log(`Error: Employee already works that `)
+}
+console.log(assignShift("Dave", {day: 'Monday'}))
+
