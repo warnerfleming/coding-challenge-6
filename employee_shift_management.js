@@ -27,5 +27,11 @@ function assignShift (employees) {
     if (employees.some((shifts) => shift.day === day))
         console.log(`Error: Employee already works that `)
 }
-console.log(assignShift("Dave", {day: 'Monday'}))
 
+
+//Task 4
+function calculateTotalHours (employeeName){
+let employee = employees.find(item => item.name === employeeName);
+return employee.shifts.reduce((total, shift) => total + shift.hours, 0)
+}
+console.log(`Total hours this week for Dave: ${calculateTotalHours("Dave")}`)
