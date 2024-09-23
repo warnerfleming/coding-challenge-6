@@ -35,3 +35,16 @@ let employee = employees.find(item => item.name === employeeName);
 return employee.shifts.reduce((total, shift) => total + shift.hours, 0)
 }
 console.log(`Total hours this week for Dave: ${calculateTotalHours("Dave")}`)
+
+//Task 5 
+function listAvailableEmployees (day) {
+let availableEmployees = employees.filter(item => {
+    return !item.shifts.some(shift => shift.day === day);
+});
+if (availableEmployees > 0) {
+   let names = availableEmployees.map(item => item.name)
+   console.log(`Employees available on ${day} : ${employees.name}`);
+}
+}
+
+listAvailableEmployees(`Tuesday`)
