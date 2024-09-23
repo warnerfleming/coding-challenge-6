@@ -7,3 +7,16 @@ const employees = [
     {name: `Greg`, shifts: [{day: `Monday`, hours: 8}]}
 
 ]
+
+
+//Task 2
+
+function displayEmployeeShifts (employees) {
+    employees.forEach(item => 
+        item.shifts.forEach(shifts => 
+        console.log(`${item.name} works ${shifts.day} for ${shifts.hours} hours`)
+    ))
+
+}
+
+displayEmployeeShifts(employees)
